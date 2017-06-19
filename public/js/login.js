@@ -1,7 +1,8 @@
 $(document).ready(function(){
-    console.log('ready') ;
     init(); 
 }) ;
+
+//初始设置监听函数
 function init(){
     var $login = $('#login_rel') ;
     var $register = $('#register_rel') ;
@@ -19,12 +20,21 @@ function init(){
         changePage(event) ;
     }) ;
     $('#my_login').click(function(){
+        let parent_window = parent.window ;
+        let badmiton = parent_window.document.getElementById('badmiton') ;
+        $(badmiton).show() ;
         child() ;
     }) ;
+    //$("#register_panel .panel-body form[type='submit']").click(function(){
+    $('#regi_btn').click(function(){
+        register() ;
+    }) ;
 }
+
+/*登录*/
 function child(){
     var username = $("#login_panel input:first").val() ;
-    var userpass = $("#login_panel input:last").val();
+    var userpass = $("#login_panel input[type='password']").val();
     console.log("name: " +username +"---password: " +userpass) ;
     /*
     $.ajax({
@@ -35,20 +45,58 @@ function child(){
             name: username,
             password: userpass
         },
-        dataType:"",
+        dataType:"json",
         contentType: "application/x-www-form-urlencoded",
         success: function(){
-                
+            alert("登录成功") ;    
         },
         error: function(){
             
         }
     });*/
 
+    var modal =  parent.window.document.getElementById('index-login')  ;
+    $(modal).modal('hide') ;
 	console.log("登录账号") ;
-	//top.showMyInfo() ;
-	
 }
+/*注册*/
+function register(){
+    var username = $("#register_panel input[type='text']").val() ;
+    var userpass = $("#register_panel input[type='password']") ;
+    var school = $('#register_panel select:first').find('option:selected').text() ; 
+    var major = $('#register_panel select:last').find('option:selected').text() ; 
+    console.log(userpass.length) ;
+    var pass1 = userpass[0].value ;
+    var pass2 = userpass[1].value ;
+    if(pass1 !== pass2)
+        alert("输入两次密码不一致:  ") ;
+    else{
+        console.log("name: " +username +"---password " +pass1 +school +major) ;
+        /*$.ajax({
+            url: "",
+            method: "POST",
+            async: false,
+            data: {
+                name: username,
+                password: pass1,
+                school: school,
+                major: major
+            },
+            dataType:"json",
+            contentType: "application/x-www-form-urlencoded",
+            success: function(){
+                alert("注册成功") ;    
+            },
+            error: function(){
+                
+            }
+        });*/
+        
+    }
+}
+
+
+/*登录注册进行切换*/
 function changePage(event){
     var $this = event.target.parentNode ;
     console.log( $this) ;

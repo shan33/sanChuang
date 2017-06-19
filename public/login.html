@@ -74,16 +74,23 @@
                                     <input type="password" class="form-control input-lg" v-bind:class="[isActive,error]"id="re_password_again1" name="re_password_again" placeholder="再次输入您的密码">
                                 </div>
                             </div>
-                            <div class="form-group col-sm-10">
-                                <label name="minority not">是否少数民族</label>
-                                <input type="radio" value="是">是
-                                <input type="radio" value="否" checked>否
-                            </div>
+                            <select class="form-group col-sm-10">
+                                <option >学校</option>
+                                <option >四川大学</option>
+                                <option >重庆大学</option>
+                            </select>
+                            <br>
+                            <select class="form-group col-sm-10">
+                                <option >学院</option>
+                                <option >计算机</option>
+                                <option >软件工程</option>
+                            </select>
+                            
                             <div class="col-sm-10 form-group">
                                 <input id="your_agree" name="your_agree" type="checkbox" checked>同意我们的<a class="text-info" href="#">条款</a>
                             </div>
                             <div class="form-group col-sm-10">
-                                <input type="submit" value="√" class="btn btn-lg btn-primary">
+                                <input id="regi_bnt" type="submit" value="√" class="btn btn-lg btn-primary">
                             </div>
                         </form>
                     </div>

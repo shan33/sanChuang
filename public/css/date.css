@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*左边*/
+#left{
+    float: left;
+    width: 50%;
+    height: 700px;
+    background-color: #eee ;
+}
+/*右边*/
+#right{
+    float: left;
+    width: 50%;
+    height: 700px;
+    background-color: #aaa;
+}

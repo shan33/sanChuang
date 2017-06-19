@@ -1,6 +1,15 @@
 $(document).ready(init) ;
 function init(){
-    showSticky() ;      //显示便利贴
+    showSticky() ;      //显示便利
+    $('#my-enter').click(function(err){
+        if(err)
+            alert("有错误") ;
+        let my_title = document.getElementById("my-title").value ;
+        let my_content = document.getElementById("my-content").value ;
+        var key = "sticky_" +localStorage.length ;
+        localStorage.setItem(key,my_title+":"+my_content) ;
+
+    }) ;
     /*//添加评论
     var enter = new Vue({
         el: "#my-enter",
@@ -42,7 +51,7 @@ function addSticky(my_title,my_content){
                 var li = document.createElement("li") ;
                 //监听
                  p_footer.addEventListener("mouseover",function(){
-                    this.innerHTML = "支持  <a href='#'><sub>0</sub></a> 评论  <a href='#'><sub>0</sub></a> 反馈  <a href='#'><sub>0</sub></a>" ;
+                    this.innerHTML = "当前参与人数<a href='#'><sub>0</sub></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>我要加入+</u>" ;
                  }) ;
                 p_footer.addEventListener("mouseleave",function(){
                      this.innerHTML="" ;
