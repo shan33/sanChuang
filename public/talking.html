@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>交流</title>
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="css/talking.css" rel="stylesheet">
+        <script src="js/jquery-3.1.1.js"></script>
+        <script src="bootstrap/js/bootstrap.js"></script>
+        <script src="js/talking.js"></script>
+
+    </head>
+    <body>
+            <div id="addInfo" class="btn-lg btn-info active">
+                添加帖子
+                <p><a target="_self" href="#myWords">
+                    <!--触发modal-->
+                    <label class="label label-info" data-toggle="modal" data-target="#myWords">+</label></a>
+                </p>
+            </div>
+            <!--model-->
+            <div id="myWords" class="modal fade" tabIndex="-1" role="dialog" aria-labelledby="myWordsLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 id="myWordsLabel" class=modal-title>你有什么想法吗？</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form">
+                                <input id="my-title" class="form-control" type="text" placeholder="输入您的标题">
+                                <br>
+                                <textarea id="my-content" class="form-control" rows="5" placeholder="输入您的内容"></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="my-enter" class="btn btn-primary" type="button" v-on:click="myInfo">提交</button>
+                            <button class="btn btn-default" type="button" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul id="stickies">
+            </ul>
+    </body>
+
+</html>

@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+
+/*第一页登录*/
+#index-login .modal-content{
+        position: relative;
+        height: 550px;
+
+}
+#index-login .modal-content iframe{
+        overflow-y: hidden;
+        width: 100%;
+        height: 520px;
+
+}
+
+/*个人信息*/
+.info{
+    float: left;
+    width: 0;
+    height: 0;
+    margin-top: 0;
+    border: none;
+}
+#badmiton{
+    position: absolute;
+    left: 50px;
+    top: 40% ;
+    width: 50px;
+    height: 50px;
+}
+#badmiton1{
+    position: absolute;
+    left: 50px;
+    top: 80% ;
+    width: 50px;
+    height: 50px;
+}
+#badmiton img{
+    width: 50px;
+    height: 50px;
+}
+#badmiton1 img{
+    width: 50px;
+    height: 50px;
+}
+#my_info p{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 1em;
+}
+#my_info p:first-child{
+    margin-top: 20%;
+    font-size: 2em;
+}
+
+/*中间版块*/
+.main{
+    float: left;
+    width: 30%;
+    height: 600px;
+    margin-top: 3%;
+    margin-left: 4%;
+}
+#middle{
+    width: 18%;
+    height: auto;
+    margin-left: 8%;
+}
+
+/*页面*/
+.page{
+    position: absolute;
+    margin-top: 700px;
+    background-color: #eee ;
+    width: 100%;
+    height: 700px;
+}
+.page iframe{
+    width: inherit;
+    height: inherit;
+}
+#two_page{
+    background-color: #eee ;
+}
+#three_page{
+    margin-top: 1400px;
+}
+#four_page{
+    margin-top: 180%;
+    background-color: #eee ;
+}
+#five_page{
+    margin-top: 2100px;
+    background-color: #aaa ;
+}
+#six_page{
+    margin-top: 2800px;
+    background-color: #eee ;
+}
+#seven_page{
+    position: absolute;
+    margin-top: 360%;
+    background-color: #aaa ;
+    width: 100%;
+    height: 700px;
+}
