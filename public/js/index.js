@@ -12,7 +12,6 @@ $(document).ready(function(){
         //if(document.cookies)
             showMyInfo() ;
     }) ;
-    $('u:first').modal('#login-index') ;
 })
 
 //初始页面

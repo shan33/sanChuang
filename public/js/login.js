@@ -36,10 +36,10 @@ function child(){
     var username = $("#login_panel input:first").val() ;
     var userpass = $("#login_panel input[type='password']").val();
     console.log("name: " +username +"---password: " +userpass) ;
-    /*
-    $.ajax({
-        url: "",
-        method: "POST",
+    
+    /*$.ajax({
+        url: "http://192.168.45.21:8080/sports1/login.do?uname=" +username +"&&upwd=" +userpass,
+        method: "192.168.45.21",
         async: false,
         data: {
             name: username,
@@ -47,7 +47,7 @@ function child(){
         },
         dataType:"json",
         contentType: "application/x-www-form-urlencoded",
-        success: function(){
+        success: function(re){
             alert("登录成功") ;    
         },
         error: function(){
@@ -55,8 +55,8 @@ function child(){
         }
     });*/
 
-    var modal =  parent.window.document.getElementById('index-login')  ;
-    $(modal).modal('hide') ;
+    //var modal =  parent.window.document.getElementById('index-login')  ;
+    //$(modal).modal('hide') ;
 	console.log("登录账号") ;
 }
 /*注册*/
@@ -73,7 +73,7 @@ function register(){
     else{
         console.log("name: " +username +"---password " +pass1 +school +major) ;
         /*$.ajax({
-            url: "",
+            url: "http://192.168.45.21:8080/sports1/register.do?uname=" +username +"&&upwd=" +pass1,
             method: "POST",
             async: false,
             data: {
